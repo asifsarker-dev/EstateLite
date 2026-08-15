@@ -22,7 +22,7 @@
 |:-------:|--------|-------------|:------:|
 | **131-1** | `feat/project-init` | Repository & Project Initialization | `[x]` |
 | **131-2** | `feat/database-setup` | Database Architecture & MongoDB Connection | `[x]` |
-| **131-3** | `feat/api-routes` | API Routing — GET & POST Properties | `[ ]` |
+| **131-3** | `feat/api-routes` | API Routing — GET & POST Properties | `[x]` |
 | **130-1** | `feat/frontend-boilerplate` | Frontend Boilerplate, Auth Provider, Routing | `[ ]` |
 | **130-2** | `feat/navbar` | Navigation Component (Navbar + Footer) | `[ ]` |
 | **130-3** | `feat/dashboard` | Dashboard / Home Page | `[ ]` |
@@ -261,7 +261,7 @@ git add ROADMAP.md && git commit -m "chore: mark task 131-2 as complete"
 
 ### TASK 131-3 - API Routing (Create & Read)
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/api-routes`
 
