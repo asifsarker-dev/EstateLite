@@ -21,7 +21,7 @@
 | Task ID | Branch | Description | Status |
 |:-------:|--------|-------------|:------:|
 | **131-1** | `feat/project-init` | Repository & Project Initialization | `[x]` |
-| **131-2** | `feat/database-setup` | Database Architecture & MongoDB Connection | `[ ]` |
+| **131-2** | `feat/database-setup` | Database Architecture & MongoDB Connection | `[x]` |
 | **131-3** | `feat/api-routes` | API Routing — GET & POST Properties | `[ ]` |
 | **130-1** | `feat/frontend-boilerplate` | Frontend Boilerplate, Auth Provider, Routing | `[ ]` |
 | **130-2** | `feat/navbar` | Navigation Component (Navbar + Footer) | `[ ]` |
@@ -33,7 +33,6 @@
 | **132-1** | `feat/seed-data` | Sample Data Population (12 mock listings) | `[ ]` |
 | **132-2** | `docs/phase-2` | Phase 2 Process Model Documentation | `[ ]` |
 | **132-3** | `docs/final-report` | README + Final Project Design Report | `[ ]` |
-
 
 ---
 
@@ -68,7 +67,6 @@
 ### Database
 - **MongoDB Atlas** - single cluster, single collection: properties
 - Fields: title, price, location, description, bedrooms, addedBy, createdAt
-
 
 ---
 
@@ -160,7 +158,7 @@ git commit -m "chore: mark task 131-1 as complete"
 
 ### TASK 131-2 - Database Architecture & Connection
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/database-setup`
 
@@ -1358,4 +1356,4 @@ git add ROADMAP.md && git commit -m "chore: mark task 132-3 as complete"
 
 ---
 
-*Last updated: 2026-08-15 | EstateLite Varsity Project*
+*Last updated: 2026-08-16 | EstateLite Varsity Project*
