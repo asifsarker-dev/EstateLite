@@ -2,12 +2,13 @@
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyCGlPCCnSLjJtCpUsfBpg7FjcNOcSF_XIM",
-  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "ofbid-bd.firebaseapp.com",
-  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "ofbid-bd",
-  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "ofbid-bd.firebasestorage.app",
-  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "369876341619",
-  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:369876341619:web:1d692fa8d922c0da0c6b06",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyDGA8qn7PSPjyfgMJr0uKrab7UF0DQ6JLo",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "estate-lite.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "estate-lite",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "estate-lite.firebasestorage.app",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "252019209722",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:252019209722:web:c7d85e105c3b8ea75c6043",
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-QG8664212V",
 };
 
 const app = initializeApp(firebaseConfig);

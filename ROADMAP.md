@@ -76,6 +76,23 @@
 - **Brand Colors**: Primary Cerulean Blue (`#4A8CE8`), Secondary Dark Slate (`#1E293B`), Accent Sky Blue (`#0284C7`).
 - **Typography**: Inter (Google Fonts) with clear visual hierarchy.
 
+### Firebase Configuration (`estate-lite`)
+- **Client Configuration (`EstateLiteClient/.env` & `firebase.config.js`)**:
+  ```env
+  VITE_FIREBASE_API_KEY=AIzaSyDGA8qn7PSPjyfgMJr0uKrab7UF0DQ6JLo
+  VITE_FIREBASE_AUTH_DOMAIN=estate-lite.firebaseapp.com
+  VITE_FIREBASE_PROJECT_ID=estate-lite
+  VITE_FIREBASE_STORAGE_BUCKET=estate-lite.firebasestorage.app
+  VITE_FIREBASE_MESSAGING_SENDER_ID=252019209722
+  VITE_FIREBASE_APP_ID=1:252019209722:web:c7d85e105c3b8ea75c6043
+  VITE_FIREBASE_MEASUREMENT_ID=G-QG8664212V
+  VITE_SERVER_URL=http://localhost:5000
+  ```
+- **Server Admin Configuration (`EstateLiteServer/estate-lite-firebase-adminsdk.json`)**:
+  - File: `EstateLiteServer/estate-lite-firebase-adminsdk.json`
+  - Client Email: `firebase-adminsdk-fbsvc@estate-lite.iam.gserviceaccount.com`
+  - Service Account Key integrated in `EstateLiteServer/index.js` via `firebase-admin/app`.
+
 ---
 
 ## ROLL 131 - Core Architecture & Backend

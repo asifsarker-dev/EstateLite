@@ -2,7 +2,26 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 5000;
 const cors = require('cors');
+const { initializeApp: initAdminApp, cert } = require('firebase-admin/app');
+const path = require('path');
+const fs = require('fs');
 require('dotenv').config();
+
+// Firebase Admin SDK Initialization
+const serviceAccountPath = path.resolve(
+  __dirname,
+  process.env.FIREBASE_SERVICE_ACCOUNT_KEY || './estate-lite-firebase-adminsdk.json'
+);
+if (fs.existsSync(serviceAccountPath)) {
+  try {
+    initAdminApp({
+      credential: cert(require(serviceAccountPath)),
+    });
+    console.log('Firebase Admin SDK initialized successfully');
+  } catch (err) {
+    console.warn('Firebase Admin SDK init warning:', err.message);
+  }
+}
 
 // CORS Configuration - mirrors Ofbid pattern
 const corsOptions = {
