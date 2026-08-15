@@ -24,12 +24,12 @@
 | **131-2** | `feat/database-setup` | Database Architecture & MongoDB Connection | `[x]` |
 | **131-3** | `feat/api-routes` | API Routing — GET & POST Properties | `[x]` |
 | **131-4** | `feat/frontend-boilerplate` | Frontend Boilerplate, Auth Provider, Routing | `[x]` |
-| **130-2** | `feat/navbar` | Navigation Component (Navbar + Footer) | `[ ]` |
-| **130-3** | `feat/dashboard` | Dashboard / Home Page | `[ ]` |
-| **130-4** | `feat/property-listing` | Property Listing Module + PropertyCard | `[ ]` |
-| **130-5** | `feat/submit-property` | Property Submission Form | `[ ]` |
-| **130-6** | `feat/login` | Login Page with Firebase Auth | `[ ]` |
-| **130-7** | `docs/phase-1` | Phase 1 Documentation | `[ ]` |
+| **130-2** | `feat/navbar` | Navigation Component (Navbar + Footer) | `[x]` |
+| **130-3** | `feat/dashboard` | Dashboard / Home Page | `[x]` |
+| **130-4** | `feat/property-listing` | Property Listing Module + PropertyCard | `[x]` |
+| **130-5** | `feat/submit-property` | Property Submission Form | `[x]` |
+| **130-6** | `feat/login` | Login Page with Firebase Auth | `[x]` |
+| **130-7** | `docs/phase-1` | Phase 1 Documentation | `[x]` |
 | **132-1** | `feat/seed-data` | Sample Data Population (12 mock listings) | `[ ]` |
 | **132-2** | `docs/phase-2` | Phase 2 Process Model Documentation | `[ ]` |
 | **132-3** | `docs/final-report` | README + Final Project Design Report | `[ ]` |
@@ -557,7 +557,7 @@ git add ROADMAP.md && git commit -m "chore: mark task 130-1 as complete"
 
 ### TASK 130-2 - Navigation Component (Navbar)
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/navbar`
 
@@ -673,7 +673,7 @@ git add ROADMAP.md && git commit -m "chore: mark task 130-2 as complete"
 
 ### TASK 130-3 - Dashboard (Home) Page
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/dashboard`
 
@@ -797,7 +797,7 @@ git add ROADMAP.md && git commit -m "chore: mark task 130-3 as complete"
 
 ### TASK 130-4 - Property Listing Module
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/property-listing`
 
@@ -927,7 +927,7 @@ git add ROADMAP.md && git commit -m "chore: mark task 130-4 as complete"
 
 ### TASK 130-5 - Property Submission Form
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/submit-property`
 
@@ -1050,7 +1050,7 @@ git add ROADMAP.md && git commit -m "chore: mark task 130-5 as complete"
 
 ### TASK 130-6 - Login Page
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/login`
 
@@ -1151,7 +1151,7 @@ git add ROADMAP.md && git commit -m "chore: mark task 130-6 as complete"
 
 ### TASK 130-7 - Phase 1 Documentation
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `docs/phase-1`
 
