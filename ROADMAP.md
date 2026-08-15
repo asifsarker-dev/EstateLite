@@ -20,7 +20,7 @@
 
 | Task ID | Branch | Description | Status |
 |:-------:|--------|-------------|:------:|
-| **131-1** | `feat/project-init` | Repository & Project Initialization | `[ ]` |
+| **131-1** | `feat/project-init` | Repository & Project Initialization | `[x]` |
 | **131-2** | `feat/database-setup` | Database Architecture & MongoDB Connection | `[ ]` |
 | **131-3** | `feat/api-routes` | API Routing — GET & POST Properties | `[ ]` |
 | **130-1** | `feat/frontend-boilerplate` | Frontend Boilerplate, Auth Provider, Routing | `[ ]` |
@@ -78,7 +78,7 @@
 
 ### TASK 131-1 - Repository & Project Initialization
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/project-init`
 
