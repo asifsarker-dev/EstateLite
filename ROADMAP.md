@@ -23,7 +23,7 @@
 | **131-1** | `feat/project-init` | Repository & Project Initialization | `[x]` |
 | **131-2** | `feat/database-setup` | Database Architecture & MongoDB Connection | `[x]` |
 | **131-3** | `feat/api-routes` | API Routing — GET & POST Properties | `[x]` |
-| **130-1** | `feat/frontend-boilerplate` | Frontend Boilerplate, Auth Provider, Routing | `[ ]` |
+| **131-4** | `feat/frontend-boilerplate` | Frontend Boilerplate, Auth Provider, Routing | `[x]` |
 | **130-2** | `feat/navbar` | Navigation Component (Navbar + Footer) | `[ ]` |
 | **130-3** | `feat/dashboard` | Dashboard / Home Page | `[ ]` |
 | **130-4** | `feat/property-listing` | Property Listing Module + PropertyCard | `[ ]` |
@@ -347,9 +347,9 @@ git add ROADMAP.md && git commit -m "chore: mark task 131-3 as complete"
 
 ---
 
-### TASK 130-1 - Frontend Boilerplate & Routing
+### TASK 131-4 - Frontend Boilerplate & Routing
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/frontend-boilerplate`
 
