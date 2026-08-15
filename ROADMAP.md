@@ -68,6 +68,14 @@
 - **MongoDB Atlas** - single cluster, single collection: properties
 - Fields: title, price, location, description, bedrooms, addedBy, createdAt
 
+### Design System & Visual Identity
+- **Logo**: Uses the official [`Logo.jpg`](file:///c:/Users/DFIT/Desktop/Projects/Paid/EstateLite/EstateLiteClient/public/Logo.jpg) with clean house roof glyph and dual-tone typography ("Estate" Charcoal + "Lite" Cerulean).
+- **Aesthetic**: Smart, minimal, professional Scandinavian real estate UI (no heavy dark/purple gradients).
+- **Background**: Soft crisp off-white (`#F8FAFC` / `bg-slate-50`).
+- **Surface / Cards**: Clean white (`#FFFFFF`) with subtle slate borders (`border-slate-200/90`) and light shadows.
+- **Brand Colors**: Primary Cerulean Blue (`#4A8CE8`), Secondary Dark Slate (`#1E293B`), Accent Sky Blue (`#0284C7`).
+- **Typography**: Inter (Google Fonts) with clear visual hierarchy.
+
 ---
 
 ## ROLL 131 - Core Architecture & Backend

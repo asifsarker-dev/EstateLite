@@ -1,15 +1,18 @@
-﻿import React from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Nav from './Homepage/Nav';
 import Footer from './Homepage/Footer';
 
 function Root() {
   return (
-    <div className="min-h-screen flex flex-col font-inter bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900 text-white">
+    <div
+      className="min-h-screen flex flex-col font-inter bg-slate-50 text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-700"
+      data-theme="estatelite"
+    >
       <Nav />
-      <div className="flex-grow">
+      <main className="flex-grow">
         <Outlet />
-      </div>
+      </main>
       <Footer />
     </div>
   );
