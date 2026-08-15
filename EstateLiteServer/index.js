@@ -67,6 +67,70 @@ async function run() {
     await client.db('admin').command({ ping: 1 });
     console.log('Pinged your deployment. You successfully connected to MongoDB!');
 
+    // ── API Routes ──
+
+    // 1. GET /api/properties - Fetch all property listings
+    app.get('/api/properties', async (req, res) => {
+      try {
+        const properties = await propertiesCollection.find({}).sort({ createdAt: -1 }).toArray();
+        res.json(properties);
+      } catch (error) {
+        console.error('Error fetching properties:', error);
+        res.status(500).json({ error: 'Failed to fetch properties' });
+      }
+    });
+
+    // 2. GET /api/properties/:id - Fetch single property details
+    app.get('/api/properties/:id', async (req, res) => {
+      try {
+        const { id } = req.params;
+        let query;
+        try {
+          query = { _id: new ObjectId(id) };
+        } catch {
+          return res.status(400).json({ error: 'Invalid property ID format' });
+        }
+        const property = await propertiesCollection.findOne(query);
+        if (!property) {
+          return res.status(404).json({ error: 'Property not found' });
+        }
+        res.json(property);
+      } catch (error) {
+        console.error('Error fetching property by ID:', error);
+        res.status(500).json({ error: 'Failed to fetch property' });
+      }
+    });
+
+    // 3. POST /api/properties - Create a new property listing
+    app.post('/api/properties', async (req, res) => {
+      try {
+        const { title, price, location, description, bedrooms, addedBy } = req.body;
+        if (!title || !price || !location || !description) {
+          return res.status(400).json({
+            error: 'Missing required fields: title, price, location, description are required',
+          });
+        }
+        const newProperty = {
+          title: title.trim(),
+          price: Number(price),
+          location: location.trim(),
+          description: description.trim(),
+          bedrooms: Number(bedrooms) || 0,
+          addedBy: addedBy || 'anonymous',
+          createdAt: new Date().toISOString(),
+        };
+        const result = await propertiesCollection.insertOne(newProperty);
+        res.status(201).json({
+          message: 'Property added successfully',
+          insertedId: result.insertedId,
+          property: { _id: result.insertedId, ...newProperty },
+        });
+      } catch (error) {
+        console.error('Error creating property:', error);
+        res.status(500).json({ error: 'Failed to add property' });
+      }
+    });
+
   } catch (error) {
     console.error('MongoDB connection error:', error);
   } finally {
