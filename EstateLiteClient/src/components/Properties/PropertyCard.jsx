@@ -1,14 +1,27 @@
-﻿import React from 'react';
+import React from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import { FaBed, FaMapMarkerAlt } from 'react-icons/fa';
 
 function PropertyCard({ property }) {
-  const { title, price, location, description, bedrooms, createdAt } = property;
+  const { title, price, location, description, bedrooms, createdAt, imageUrl } = property;
 
   return (
     <div className="bg-white border border-slate-200/90 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all duration-200 flex flex-col">
-      <div className="h-44 bg-gradient-to-br from-slate-100 to-blue-50/50 flex flex-col items-center justify-center relative border-b border-slate-100">
-        <img src="/favicon.jpg" alt="House roof icon" className="w-12 h-12 object-contain opacity-85" />
+      <div className="h-44 relative border-b border-slate-100 overflow-hidden bg-gradient-to-br from-slate-100 to-blue-50/50">
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            alt={`Property image for ${title}`}
+            className="w-full h-full object-cover"
+            onError={(e) => { e.target.style.display = 'none'; e.target.nextSibling.style.display = 'flex'; }}
+          />
+        ) : null}
+        <div
+          className="w-full h-full flex flex-col items-center justify-center"
+          style={{ display: imageUrl ? 'none' : 'flex' }}
+        >
+          <img src="/favicon.jpg" alt="Property placeholder" className="w-12 h-12 object-contain opacity-85" />
+        </div>
         <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-xs border border-slate-200 text-slate-700 text-xs font-semibold px-2.5 py-1 rounded-full flex items-center gap-1 shadow-xs">
           <FaBed className="text-primary text-xs" />
           <span>{bedrooms || 0} Beds</span>

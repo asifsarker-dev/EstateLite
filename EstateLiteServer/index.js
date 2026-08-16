@@ -123,7 +123,7 @@ async function run() {
     // 3. POST /api/properties - Create a new property listing
     app.post('/api/properties', async (req, res) => {
       try {
-        const { title, price, location, description, bedrooms, addedBy } = req.body;
+        const { title, price, location, description, bedrooms, addedBy, imageUrl } = req.body;
         if (!title || !price || !location || !description) {
           return res.status(400).json({
             error: 'Missing required fields: title, price, location, description are required',
@@ -136,6 +136,7 @@ async function run() {
           description: description.trim(),
           bedrooms: Number(bedrooms) || 0,
           addedBy: addedBy || 'anonymous',
+          ...(imageUrl && { imageUrl }),
           createdAt: new Date().toISOString(),
         };
         const result = await propertiesCollection.insertOne(newProperty);
