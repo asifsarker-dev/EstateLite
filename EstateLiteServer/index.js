@@ -63,6 +63,14 @@ app.get('/', (req, res) => {
   res.send('EstateLite server is running');
 });
 
+const dns = require('dns');
+dns.setDefaultResultOrder('ipv4first');
+try {
+  dns.setServers(['8.8.8.8', '1.1.1.1']);
+} catch (err) {
+  // Ignore fallback error
+}
+
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const uri = process.env.MONGO_URI;
 
