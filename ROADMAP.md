@@ -30,7 +30,7 @@
 | **130-5** | `feat/submit-property` | Property Submission Form | `[x]` |
 | **130-6** | `feat/login` | Login Page with Firebase Auth | `[x]` |
 | **130-7** | `docs/phase-1` | Phase 1 Documentation | `[x]` |
-| **132-1** | `feat/seed-data` | Sample Data Population (12 mock listings) | `[ ]` |
+| **132-1** | `feat/seed-data` | Sample Data Population (12 mock listings) | `[x]` |
 | **132-2** | `docs/phase-2` | Phase 2 Process Model Documentation | `[ ]` |
 | **132-3** | `docs/final-report` | README + Final Project Design Report | `[ ]` |
 
@@ -1195,7 +1195,7 @@ git add ROADMAP.md && git commit -m "chore: mark task 130-7 as complete"
 
 ### TASK 132-1 - Sample Data Population (Seeding)
 
-> **Status: `[ ]` Not Started**
+> **Status: `[x]` COMPLETED**
 
 **Branch:** `feat/seed-data`
 
