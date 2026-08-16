@@ -34,6 +34,9 @@ app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use(cors(corsOptions));
 
+// Serve uploads folder as static files — accessible at /uploads/<filename>
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 // Rate limiting middleware - mirrors Ofbid pattern
 const rateLimit = new Map();
 const RATE_LIMIT_WINDOW = 60000; // 1 minute
@@ -61,6 +64,24 @@ app.use((req, res, next) => {
 // Root health check endpoint
 app.get('/', (req, res) => {
   res.send('EstateLite server is running');
+});
+
+// GET /api/uploads - List all images in the uploads folder
+app.get('/api/uploads', (req, res) => {
+  const uploadsDir = path.join(__dirname, 'uploads');
+  const baseUrl = `${req.protocol}://${req.get('host')}`;
+  try {
+    const files = fs.readdirSync(uploadsDir).filter(f =>
+      /\.(jpg|jpeg|png|webp|gif)$/i.test(f)
+    );
+    const images = files.map(f => ({
+      filename: f,
+      url: `${baseUrl}/uploads/${encodeURIComponent(f)}`,
+    }));
+    res.json({ count: images.length, images });
+  } catch (err) {
+    res.status(500).json({ error: 'Could not read uploads directory' });
+  }
 });
 
 const dns = require('dns');
